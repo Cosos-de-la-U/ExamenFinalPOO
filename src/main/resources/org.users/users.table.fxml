@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackDialog" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.users.UsersTableController">
+   <children>
+      <AnchorPane prefHeight="481.0" prefWidth="644.0" style="-fx-background-color: linear-gradient(to right, #f12711, #f5af19);">
+         <children>
+            <TableView fx:id="usersTable" layoutX="22.0" layoutY="133.0" onMouseClicked="#selectUser" prefHeight="334.0" prefWidth="601.0">
+               <columns>
+                  <TableColumn fx:id="tcId" prefWidth="56.0" text="id" />
+                  <TableColumn fx:id="tcNombre" prefWidth="259.0" text="Nombre" />
+                  <TableColumn fx:id="tcNickname" prefWidth="109.0" text="Nickname" />
+                  <TableColumn fx:id="tcAcceso" prefWidth="87.0" text="Acceso" />
+                  <TableColumn fx:id="tcTipo" prefWidth="89.0" text="Tipo" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="btnAdd" layoutX="522.0" layoutY="26.0" onAction="#agregarUsuario" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #28a745;" text="Agregar" textFill="WHITE" />
+            <JFXButton fx:id="btnDelete" layoutX="417.0" layoutY="26.0" onAction="#EliminarUsuario" prefHeight="44.0" prefWidth="93.0" style="-fx-background-color: #dc3545;" text="Eliminar" textFill="WHITE" />
+            <Label layoutX="36.0" layoutY="20.0" text="👨🏻‍💼Usuarios" textFill="WHITE">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnEdit" layoutX="316.0" layoutY="26.0" onAction="#editUsuario" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #ffc107;" text="Editar" textFill="WHITE" />
+            <Label layoutX="179.0" layoutY="95.0" prefHeight="25.0" prefWidth="194.0" text="🔍 Buscar por nombre o nickname:" textFill="WHITE" />
+            <TextField layoutX="377.0" layoutY="95.0" promptText="🔍 Nombre o nickname" />
+            <JFXButton fx:id="btnAdd1" layoutX="549.0" layoutY="95.0" onAction="#agregarUsuario" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #28a745;" text="Buscar" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
